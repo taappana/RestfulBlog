@@ -19,12 +19,6 @@ const blogSchema = new mongoose.Schema({
 
 const Blog = mongoose.model("Blog", blogSchema);
 
-Blog.create({
-   title: "Test blog",
-   image: "https://images.unsplash.com/photo-1485811055483-1c09e64d4576?dpr=1&auto=compress,format&fit=crop&w=1199",
-   body: "HELLO, THIS IS A BLOG POST!"
-});
-
 // RESTFUL ROUTES
 app.get("/", (req, res) => {
     res.redirect("/blogs"); 
